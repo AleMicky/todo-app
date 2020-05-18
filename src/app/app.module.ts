@@ -4,11 +4,7 @@ import { NgModule } from '@angular/core';
 // ngrx
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-// from
 import { ReactiveFormsModule} from '@angular/forms';
-
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { TodoComponent } from './todo/todo.component';
@@ -17,7 +13,7 @@ import { TodoItemComponent } from './todo/todo-item/todo-item.component';
 import { TodoFooterComponent } from './todo/todo-footer/todo-footer.component';
 import { TodoAddComponent } from './todo/todo-add/todo-add.component';
 import { environment } from '../environments/environment';
-import {appReducers} from './app-reducer';
+import { appReducers } from './app-reducer';
 import { FilterPipe } from './filter/filter.pipe';
 
 @NgModule({
@@ -34,7 +30,6 @@ import { FilterPipe } from './filter/filter.pipe';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule,
     StoreModule.forRoot(appReducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
